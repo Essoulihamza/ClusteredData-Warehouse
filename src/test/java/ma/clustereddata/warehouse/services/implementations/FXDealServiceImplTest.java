@@ -5,6 +5,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -43,6 +44,7 @@ public class FXDealServiceImplTest {
     }
 
     @Test
+    @DisplayName("[Create method] Throws already exist Exception.")
     void createMethodShouldThrowRequestAlreadyExistException() {
         
         fxDealDto.setId("test");
@@ -57,6 +59,7 @@ public class FXDealServiceImplTest {
     }
 
     @Test
+    @DisplayName("[Create method] Returns the inserted entity as FXDealdto.")
     void createMethodShouldReturnTheInsertedDealDto() {
         
         fxDealDto.setId("test");
